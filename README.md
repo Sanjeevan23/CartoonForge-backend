@@ -64,8 +64,13 @@ cd CartoonForge-backend
 ## Create Virtual Environment (Recommended)
 
 Windows
+cmd
 python -m venv venv
 venv\Scripts\activate
+
+PowerShell
+python -m venv venv        # create virtual environment
+.\venv\Scripts\Activate    # activate venv in PowerShell
 
 macOS / Linux
 python3 -m venv venv
@@ -82,6 +87,8 @@ pip install -r requirements.txt
 ## Run the Backend Server
 
 uvicorn main:app --reload
+or 
+uvicorn main:app --reload --host 0.0.0.0 --port 8000
 
 You should see output like:
 Uvicorn running on http://127.0.0.1:8000
